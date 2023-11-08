@@ -14,8 +14,7 @@ camino(X, Y, Arcos, Visitados, Camino) :-
     member((X, Z), Arcos),          % Elegimos un arco (X, Z)
     write('X: '), write(X), nl,
     write('Z: '), write(Z), nl,
-    \+ member(Z, Visitados),      % Z no debe estar en los visitados
-    write('ACCEPTED'),nl,
+    \+ member(Z, Visitados),      % Z no debe estar en los visitados    
     camino(Z, Y, Arcos, [X|Visitados], Camino).
 
 
